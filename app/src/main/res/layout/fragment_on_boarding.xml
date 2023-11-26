@@ -78,6 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/search_user" />
 
     <TextView
+        android:id="@+id/signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"

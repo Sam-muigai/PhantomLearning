@@ -13,7 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.phantomlearning.databinding.FragmentSignUpBinding;
+import com.example.phantomlearning.databinding.FragmentLecturerSignUpBinding;
+import com.example.phantomlearning.model.Lecturer;
 import com.example.phantomlearning.model.Student;
 import com.example.phantomlearning.viewModel.AuthViewModel;
 import com.example.phantomlearning.viewModel.AuthViewModelFactory;
@@ -21,15 +22,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 
-public class SignUpFragment extends Fragment {
+public class LecturerSignUpFragment extends Fragment {
 
-    FragmentSignUpBinding binding;
-
+    FragmentLecturerSignUpBinding binding;
     AuthViewModel authViewModel;
-
-    Student student;
     String email;
     String password;
+    Lecturer lecturer;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,53 +42,51 @@ public class SignUpFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentSignUpBinding.inflate(inflater, container, false);
+        binding = FragmentLecturerSignUpBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        binding.studentRegisterButton.setOnClickListener(
+        binding.lecturerRegisterButton.setOnClickListener(
                 view1 -> {
-                    email = binding.studentEmail.getText().toString();
-                    password = binding.studentPassword.getText().toString();
-                    student = new Student(
-                            binding.studentName.getText().toString(),
-                            binding.studentRegNo.getText().toString(),
-                            "student"
+                    email = binding.lecturerEmail.getText().toString();
+                    password = binding.lecturerPassword.getText().toString();
+                    lecturer = new Lecturer(
+                            binding.lecturerName.getText().toString(),
+                            binding.lecturerCourse.getText().toString(),
+                            binding.lecturerEmail.getText().toString()
                     );
                     binding.pbIsLoading.setVisibility(View.VISIBLE);
-                    binding.studentRegisterButton.setVisibility(View.GONE);
+                    binding.lecturerRegisterButton.setVisibility(View.GONE);
                     signUpUsers();
                 }
         );
 
-
         authViewModel.isSignUpSuccess.observe(getViewLifecycleOwner(), isSignUpSuccess -> {
             if (isSignUpSuccess) {
                 Toast.makeText(getContext(), "Sign up successfully", Toast.LENGTH_SHORT).show();
-            }else {
+            } else {
                 binding.pbIsLoading.setVisibility(View.GONE);
-                binding.studentRegisterButton.setVisibility(View.VISIBLE);
+                binding.lecturerRegisterButton.setVisibility(View.VISIBLE);
                 Toast.makeText(getContext(), "Sign up failed", Toast.LENGTH_SHORT).show();
             }
         });
         authViewModel.isRegistrationSuccessful.observe(getViewLifecycleOwner(), isRegistrationSuccess -> {
             if (isRegistrationSuccess) {
                 Toast.makeText(getContext(), "Registration successfully", Toast.LENGTH_SHORT).show();
-                NavHostFragment.findNavController(SignUpFragment.this).navigate(R.id.action_signUp_to_dashboard);
-            }else {
+                NavHostFragment.findNavController(LecturerSignUpFragment.this).navigate(R.id.action_signUp_to_dashboard);
+            } else {
                 binding.pbIsLoading.setVisibility(View.GONE);
-                binding.studentRegisterButton.setVisibility(View.VISIBLE);
+                binding.lecturerRegisterButton.setVisibility(View.VISIBLE);
             }
         });
     }
 
     void signUpUsers() {
         if (!email.isEmpty() || !password.isEmpty()) {
-            authViewModel.signUpStudent(email, password, student);
+            authViewModel.signUpLecturer(email, password, lecturer);
         }
     }
 }

@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpFragment">
+    tools:context=".LecturerSignUpFragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -15,10 +15,10 @@
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:text="Student SignUp Page"/>
+        android:text="Lecturer SignUp Page"/>
 
     <EditText
-        android:id="@+id/studentName"
+        android:id="@+id/lecturerName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
@@ -26,27 +26,27 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:hint="Student name" />
+        android:hint="Lecturer name" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Student Email"
+        android:hint="Lecturer Email"
         android:layout_margin="20dp"
-        android:layout_below="@id/studentName"
-        android:id="@+id/studentEmail"/>
+        android:layout_below="@id/lecturerName"
+        android:id="@+id/lecturerEmail"/>
     <EditText
         android:layout_width="match_parent"
+        android:layout_below="@id/lecturerEmail"
         android:layout_height="wrap_content"
-        android:hint="Registration No"
+        android:hint="Course"
         android:layout_margin="20dp"
-        android:layout_below="@id/studentEmail"
-        android:id="@+id/studentRegNo"/>
+        android:id="@+id/lecturerCourse"/>
 
     <EditText
-        android:id="@+id/studentPassword"
+        android:id="@+id/lecturerPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/studentRegNo"
+        android:layout_below="@id/lecturerCourse"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
@@ -54,10 +54,10 @@
         android:hint="Password" />
 
     <EditText
-        android:id="@+id/confirmStudentPassword"
+        android:id="@+id/confirmLecturerPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/studentPassword"
+        android:layout_below="@id/lecturerPassword"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
@@ -65,10 +65,10 @@
         android:hint="Confirm Password" />
 
     <Button
-        android:id="@+id/studentRegisterButton"
+        android:id="@+id/lecturerRegisterButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/confirmStudentPassword"
+        android:layout_below="@id/confirmLecturerPassword"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
@@ -79,7 +79,7 @@
         android:id="@+id/pbIsLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/confirmStudentPassword"
+        android:layout_below="@id/confirmLecturerPassword"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"

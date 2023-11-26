@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LecturerDashboard">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/semester"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:textSize="25sp"
+                    android:id="@+id/mainTitle"
+                    android:text="Welcome to Lecturer's DashBoard"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:textSize="18sp"
+                    android:id="@+id/miniTitle"
+                    android:layout_below="@+id/mainTitle"
+                    android:text="Enter Student marks here"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:textSize="15sp"
+                    android:id="@+id/semester1"
+                    android:layout_below="@+id/miniTitle"
+                    android:text="Semester 1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:id="@+id/semester1Labels"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_below="@id/semester"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Assignment 1:"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Assignment 2:"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="CAT 1:"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="CAT 2:"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Exam Score:"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/semester1Labels"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_below="@id/semester1"
+                    android:id="@+id/semester1Data"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="200dp"
+                        android:inputType="text"
+                        android:id="@+id/assignment1"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:layout_width="200dp"
+                        android:inputType="text"
+                        android:id="@+id/assignment2"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:layout_width="200dp"
+                        android:inputType="text"
+                        android:id="@+id/cat1"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:layout_width="200dp"
+                        android:inputType="text"
+                        android:id="@+id/cat2"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:layout_width="200dp"
+                        android:inputType="text"
+                        android:id="@+id/examScore"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20dp"
+                android:textSize="15sp"
+                android:id="@+id/semester2"
+                android:layout_below="@+id/semester1Data"
+                android:text="Semester 2"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:id="@+id/semester2Labels"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_below="@id/semester2"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Assignment 1:"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Assignment 2:"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="CAT 1:"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="CAT 2:"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Exam Score:"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/semester2Labels"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_below="@id/semester2"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="200dp"
+                        android:inputType="text"
+                        android:id="@+id/assignment3"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:layout_width="200dp"
+                        android:inputType="text"
+                        android:id="@+id/assignment4"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:layout_width="200dp"
+                        android:inputType="text"
+                        android:id="@+id/cat3"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:layout_width="200dp"
+                        android:inputType="text"
+                        android:id="@+id/cat4"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:layout_width="200dp"
+                        android:inputType="text"
+                        android:id="@+id/exam2Score"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:id="@+id/progressBar"/>
+            <Button
+                android:layout_width="match_parent"
+                android:text="SUBMIT MARKS"
+                android:layout_margin="30dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

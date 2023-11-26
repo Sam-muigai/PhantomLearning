@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "732968106778",
+    "project_id": "phantomlearning-70776",
+    "storage_bucket": "phantomlearning-70776.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732968106778:android:616d6b49d798098a3c0aa3",
+        "android_client_info": {
+          "package_name": "com.example.phantomlearning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDm0A8uBTVT-HWrmnUEPOL6GwbZntufQ5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
